@@ -8,7 +8,7 @@
 #
 GIT_REPO="LIMXTEC"
 GIT_PROJECT="MECinsight-docker"
-DOCKER_REPO="LIMXTEC"
+DOCKER_REPO="limxtec"
 IMAGE_NAME="mec-insight-docker"
 IMAGE_TAG="16.04"
 CONTAINER_NAME="mec-insight-docker"
