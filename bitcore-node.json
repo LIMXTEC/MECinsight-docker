@@ -1,0 +1,25 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "bitcoind",
+    "insight-api-mec",
+    "insight-ui-mec",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "/home/megacoin/bitcore-livenet/bin/mynode/data",
+        "exec": "/home/megacoin/bitcore-livenet/bin/megacoind"
+      }
+    },
+    "insight-api-bitcore": {
+        "routePrefix": "api"
+    },
+    "insight-ui-bitcore": {
+        "apiPrefix": "api",
+        "routePrefix": ""
+    }
+  }
+}
