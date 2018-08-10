@@ -21,15 +21,15 @@ Login as root, then only run the following script:
 sudo bash -c "$(curl -fsSL https://github.com/LIMXTEC/MECinsight-docker/raw/master/mec-insight-docker.sh)"
 ```
 
-## Add nodes to megacoin.conf
-Modify [addnodes.conf](https://github.com/LIMXTEC/MECinsight-docker/blob/master/addnodes.conf) and trigger the addnodes.sh script inside the running docker container with:
+## Replace existing megacoin.conf
+Modify [megacoin.conf](https://github.com/LIMXTEC/MECinsight-docker/blob/master/megacoin.conf) and trigger the new_config.sh script inside the running docker container with:
 ```sh
-docker exec mec-insight-docker addnodes.sh
+sudo docker exec mec-insight-docker new_config.sh
 ```
 
 ## Build/run (only for docker image development)
 ```sh
-docker build -t LIMXTEC/mec-insight-docker .
-docker push LIMXTEC/mec-insight-docker
-docker run --rm --name mec-insight-docker -p 7951:7951 -p 7952:7952 -p 9051:9051 -p 28332:28332 -p 3001:3001 LIMXTEC/mec-insight-docker
+docker build -t limxtec/mec-insight-docker .
+docker push limxtec/mec-insight-docker
+docker run --rm --name mec-insight-docker -p 7951:7951 -p 7952:7952 -p 9051:9051 -p 28332:28332 -p 3001:3001 limxtec/mec-insight-docker
 ```
