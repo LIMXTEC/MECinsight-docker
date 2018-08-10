@@ -17,7 +17,7 @@ RPC_PORT="7952"
 TOR_PORT="9051"
 ZMQ_PORT="28332"
 API_PORT="3001"
-WEB="bitcore.cc" # without "https://" and without the last "/" (only HTTPS accepted)
+WEB="megacoin.eu/downloads" # without "https://" and without the last "/" (only HTTPS accepted)
 BOOTSTRAP="bootstrap.tar.gz"
 
 #
