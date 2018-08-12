@@ -11,7 +11,7 @@ fi
 
 # Create script to downloading new megacoin.conf and replace the old one
 echo "#!/bin/bash" > /usr/local/bin/new_config.sh
-echo "Downloading new megacoin.conf and replace the old one. Please wait..." >> /usr/local/bin/new_config.sh
+echo "echo \"Downloading new megacoin.conf and replace the old one. Please wait...\"" >> /usr/local/bin/new_config.sh
 echo "mv /home/megacoin/bitcore-livenet/bin/mynode/data/megacoin.conf /home/megacoin/bitcore-livenet/bin/mynode/data/megacoin.conf.bak" >> /usr/local/bin/new_config.sh
 echo "wget https://raw.githubusercontent.com/LIMXTEC/MECinsight-docker/master/megacoin.conf -O /home/megacoin/bitcore-livenet/bin/mynode/data/megacoin.conf" >> /usr/local/bin/new_config.sh
 echo "supervisorctl restart megacoind" >> /usr/local/bin/new_config.sh
